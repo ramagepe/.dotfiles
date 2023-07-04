@@ -71,9 +71,6 @@ programs:
   - pavucontrol
   - playerctl
 
-  # Screenshot
-  - flameshot
-
   # Bluetooth
   - bluez
   - bluez-utils
