@@ -42,7 +42,7 @@ case "$choice" in
         # Run stow on the .dotfiles directory, ignoring pkgs and extras
         cd $HOME/.dotfiles
         stow --ignore='install-script' .
-        cd install-script
+        cd $HOME
     ;;
     * )
         echo "Skipping stow..."
