@@ -1,0 +1,73 @@
+# Replace ls with exa
+alias ls='exa -l --color=always --group-directories-first --icons' # preferred listing
+alias la='exa -al --color=always --group-directories-first --icons'  # all files and dirs
+alias ll='exa -l --color=always --group-directories-first --icons'  # long format
+alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
+alias l.="exa -a | egrep '^\.'"                                     # show only dotfiles
+alias ip="ip -color"
+
+# Config shortcut
+alias config="code ~/.config/hypr/."
+
+# Get fastest mirrors
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+
+# Neovim patch
+#alias nvim="lvim"
+
+# Config shortcuts
+alias config-snapper="sudo code /etc/snapper/configs"
+alias config-aliases="code ~/.custom_aliases"
+alias config-qtile="code ~/.config/qtile/config.py"
+alias config-starship="code ~/.config/starship.toml"
+alias config-alacritty="code ~/.config/alacritty/alacritty.yml"
+alias config-autostart="code ~/.xprofile"
+alias config-picom="code ~/.config/picom/picom.conf"
+alias config-pacman="sudo code /etc/pacman.conf"
+alias config-bash="code ~/.bashrc"
+alias config-starship="code ~/.config/starship.toml"
+
+# Debugging shorcuts
+alias debug-qtile="nvim ~/.local/share/qtile/qtile.log"
+
+# Logs shortcuts
+alias log-qtile="sudo nvim ~/.local/share/qtile/qtile.log"
+
+# Unpack
+alias unpack="aunpack"
+
+# Cleanup orphaned packages
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+alias orphans="pacman -Qdt"
+
+# Snapper shortcuts
+alias snap-root="sudo snapper -c root create -d"
+alias snap-home="sudo snapper -c home create -d"
+alias snap-list-root="sudo snapper -c root list"
+alias snap-list-home="sudo snapper -c home list"
+alias snap-delete-root="sudo snapper -c root delete"
+alias snap-delete-home="sudo snapper -c home delete"
+
+# Show services on the running network
+alias net-services="avahi-browse --all --ignore-local --resolve --terminate"
+
+# Emacs client
+#alias emacs="emacsclient -c -a emacs &"
+
+# Feh background
+alias backg="feh --bg-scale"
+
+# Get connected usb devices
+alias usb="ls -1 /dev/sd?"
+
+# Get hardware ingormation
+alias info-gpu="radeontop"
+alias info-mother="sudo dmidecode -t baseboard"
+alias info-cpu="lscpu"
+
+# Hackernews script
+alias hackernews="cd /home/ramage/code/python/projects/hackernews_scrapper && poetry run python scrap_hackn.py"
+
