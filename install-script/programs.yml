@@ -12,6 +12,7 @@ programs:
   - foot
   - mako
   - grim
+  - wlogout
   - slurp
   - wf-recorder
   - light
@@ -21,9 +22,7 @@ programs:
   - imagemagick
   - xfce-polkit
   - xorg-xwayland
-  - xdg-desktop-portal
   - xdg-desktop-portal-wlr
-  - grim
 
   # Version control
   - git
@@ -47,7 +46,6 @@ programs:
   - zip
   - man
   - dmidecode
-  - lscpu
 
   # Document management
   - calibre
@@ -64,7 +62,6 @@ programs:
   - udisks2
   - udiskie
   - xdg-user-dirs
-
 
   # Audio
   - carla

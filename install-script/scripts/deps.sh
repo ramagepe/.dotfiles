@@ -15,7 +15,7 @@ echo -e ""
 
 #! ---- Install core dependencies --------
 
-read -p "Do you want to install needed dependencies? [y/N] " choice
+read -p "Install needed dependencies? [y/N] " choice
 case "$choice" in
     y|Y )
         echo "Installing dependencies..."
@@ -55,7 +55,7 @@ esac
 
 #! ---- Install rustup --------------------
 
-read -p "Do you want to install rustup? [y/N] " choice
+read -p "Install rustup? [y/N] " choice
 case "$choice" in
     y|Y )
         echo "Installing rustup..."
@@ -75,7 +75,7 @@ esac
 
 #! ---- Install paru --------------------
 
-read -p "Do you want to install paru? [y/N] " choice
+read -p "Install paru? [y/N] " choice
 case "$choice" in
     y|Y )
         echo "Installing paru..."
@@ -97,7 +97,7 @@ esac
 
 #! ---- Install nvm + node --------------
 
-read -p "Do you want to install nvm + node? [y/N] " choice
+read -p "Install nvm + node? [y/N] " choice
 case "$choice" in
     y|Y )
         echo "Installing nvm + node..."

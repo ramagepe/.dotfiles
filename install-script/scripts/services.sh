@@ -8,7 +8,7 @@ echo -e "=   Enabling services  ="
 echo -e "========================"
 echo -e ""
 
-read -p "Do you want to enable/start services? [y/N] " choice
+read -p "Enable services? [y/N] " choice
 case "$choice" in
     y | Y)
         echo "Enabling and starting services..."

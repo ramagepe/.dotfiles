@@ -2,7 +2,7 @@
 
 set -e
 
-read -p "Do you want to install theme set? [y/N] " choice
+read -p "Install theme set? [y/N] " choice
 case "$choice" in
     y|Y )
         echo "Copying files..."
@@ -19,5 +19,16 @@ case "$choice" in
     ;;
     * )
         echo "Skipping theme installation..."
+    ;;
+esac
+
+read -p "Install starship? [y/N] " choice
+case "$choice" in
+    y|Y )
+        echo "Installing starship..."
+        curl -sS https://starship.rs/install.sh | sh
+    ;;
+    * )
+        echo "Skipping starship installation..."
     ;;
 esac

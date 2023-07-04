@@ -7,14 +7,14 @@
 # Kill already running process
 _ps=(waybar mako)
 for _prs in "${_ps[@]}"; do
-	if [[ `pidof ${_prs}` ]]; then
-		killall -9 ${_prs}
-	fi
+    if [[ `pidof ${_prs}` ]]; then
+        killall -9 ${_prs}
+    fi
 done
 
 # Polkit agent
 if [[ ! `pidof xfce-polkit` ]]; then
-	/usr/lib/xfce-polkit/xfce-polkit &
+    /usr/lib/xfce-polkit/xfce-polkit &
 fi
 
 # Set wallpaper
@@ -40,5 +40,3 @@ blueman-applet &
 pasystray &
 # Auto-mount tool
 udiskie &
-# Start mpd
-exec mpd &

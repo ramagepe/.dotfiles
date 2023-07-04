@@ -15,7 +15,7 @@ echo -e ""
 
 #! ---- Update mirrors -------------------
 
-read -p "Do you want to update mirrors? [y/N] " choice
+read -p "Update mirrors? [y/N] " choice
 case "$choice" in
     y|Y )
         # Install reflector if not already installed
@@ -49,7 +49,7 @@ esac
 
 #! ---- Update system --------------------
 
-read -p "Do you want to update the system? [y/N] " choice
+read -p "Update the system? [y/N] " choice
 case "$choice" in
     y|Y )
         echo -e ""

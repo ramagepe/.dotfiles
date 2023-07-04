@@ -13,7 +13,7 @@ echo -e "========================"
 
 #! ---- Install programs from list ------
 
-read -p "Do you want to install all programs in programs.yml? [y/N] " choice
+read -p "Install all programs in programs.yml? [y/N] " choice
 case "$choice" in
     y|Y )
         echo "Installing programs..."

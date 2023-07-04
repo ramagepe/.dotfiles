@@ -8,7 +8,7 @@ echo -e "=    Stow migration    ="
 echo -e "========================"
 echo -e ""
 
-read -p "Do you want to stow? [y/N] " choice
+read -p "Wanna stow? [y/N] " choice
 case "$choice" in
     y|Y )
         echo "Stowing..."
@@ -17,7 +17,15 @@ case "$choice" in
         if [ -f "$HOME/.bashrc" ]; then
             rm $HOME/.bashrc
         fi
+
+        if [ -f "$HOME/.aliases" ]; then
+            rm $HOME/.aliases
+        fi
         
+        if [ -d "$HOME/.config/starship.toml" ]; then
+            rm "$HOME/.config/starship.toml"
+        fi
+
         if [ -d "$HOME/.config/hypr" ]; then
             rm -r "$HOME/.config/hypr"
         fi
@@ -25,7 +33,7 @@ case "$choice" in
         # Run stow on the .dotfiles directory, ignoring pkgs and extras
         cd $HOME/.dotfiles
         stow --ignore='install-script' .
-        cd install-script
+        cd $HOME
     ;;
     * )
         echo "Skipping stow..."

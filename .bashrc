@@ -14,3 +14,4 @@ eval "$(starship init bash)"
 source ~/.aliases
 
 export PATH="$HOME/.local/bin:$PATH"
+. "$HOME/.cargo/env"
