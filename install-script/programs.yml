@@ -46,6 +46,8 @@ programs:
   - unzip
   - zip
   - man
+  - dmidecode
+  - lscpu
 
   # Document management
   - calibre
