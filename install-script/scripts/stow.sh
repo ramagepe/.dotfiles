@@ -13,6 +13,15 @@ case "$choice" in
     y|Y )
         echo "Stowing..."
         
+	# Add .config folder
+	mkdir $HOME/.config	
+	
+	# Add user folders
+	mkdir $HOME/documents
+	mkdir $HOME/pictures
+	mkdir $HOME/downloads
+	mkdir $HOME/code
+
         # Remove conflicts
         if [ -f "$HOME/.bashrc" ]; then
             rm $HOME/.bashrc
@@ -33,7 +42,7 @@ case "$choice" in
         # Run stow on the .dotfiles directory, ignoring pkgs and extras
         cd $HOME/.dotfiles
         stow --ignore='install-script' .
-        cd $HOME
+        cd install-script
     ;;
     * )
         echo "Skipping stow..."
